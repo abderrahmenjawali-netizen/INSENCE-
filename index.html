@@ -1,0 +1,625 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encens Polyvalent - L'art de la fragrance naturelle</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Georgia', 'Times New Roman', serif;
+        }
+
+        :root {
+            --primary: #816718;
+            --secondary:#FFAE00;
+            --accent: #473800;
+            --light: #D9BC57;
+            --dark: #7D670B;
+            --text: #755308;
+            --shadow: rgba(139,169, 119, 0.1);
+            --gold: #020300;
+        }
+
+        body {
+            background-color: #fefefe;
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #040700;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+            color: var(--light);
+        }
+    .social-buttons {
+        position: fixed;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .social-buttons a {
+        width: 50px;
+        height: 50px;
+        background: #00000;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        text-decoration: none;
+        font-size: 22px;
+        color: #333;
+        transition: transform 0.3s, background 0.3s;
+    }
+
+    .social-buttons a:hover {
+        transform: scale(1.2);
+        background: #8e5b3a;
+        color: white;
+    }
+
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .incense-icon {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+            animation: glow 3s infinite alternate;
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px var(--gold); }
+            100% { text-shadow: 0 0 20px var(--gold), 0 0 30px var(--accent); }
+        }
+
+        /* Introduction */
+        .intro {
+            padding: 4rem 0;
+            background-color: var(--light);
+            text-align: center;
+            position: relative;
+        }
+
+        .intro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary), var(--accent), var(--primary));
+        }
+
+        .intro h2 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem;
+            font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+        }
+
+        .intro p {
+            max-width: 800px;
+            margin: 0 auto 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .highlight-box {
+            background-color: white;
+            border-left: 5px solid var(--accent);
+            padding: 1.5rem;
+            margin: 2rem auto;
+            max-width: 700px;
+            text-align: left;
+            box-shadow: 0 5px 15px var(--shadow);
+            border-radius: 0 10px 10px 0;
+        }
+
+        /* Sections */
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            margin: 4rem 0 2.5rem;
+            font-size: 2.3rem;
+            position: relative;
+            font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        /* Hotel Section */
+        .hotel-section {
+            padding: 2rem 0 4rem;
+            background-color: white;
+        }
+
+        .hotel-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .hotel-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hotel-text h3 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+        }
+
+        .hotel-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+
+        .hotel-visual {
+            background:url('Blue.jpg') no-repeat center center/cover; 
+            width: 120%;
+            height: 600px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 5rem;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hotel-visual::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image:#15FF00;
+            opacity: 0.3;
+        }
+
+        .hotel-visual i {
+            z-index: 2;
+        }
+
+        .hotel-tips {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .tip {
+            background-color: var(--light);
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .tip i {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Applications */
+        .applications {
+            padding: 4rem 0;
+            background-color: var(--light);
+        }
+
+        .applications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .application-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px var(--shadow);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .application-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 20px 40px rgba(139, 69, 19, 0.15);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: var(--secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        .card-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-content h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+        }
+
+        .card-content p {
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-features {
+            list-style-type: none;
+            margin-top: auto;
+        }
+
+        .card-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #eee;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+
+        .card-features li:last-child {
+            border-bottom: none;
+        }
+
+        .card-features li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
+        /* Avantages */
+        .avantages {
+            padding: 4rem 0;
+            background-color: white;
+        }
+
+        .avantages-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .avantage {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(139, 69, 19, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .avantage:hover {
+            transform: scale(1.05);
+        }
+
+        .avantage-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .avantage h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* CTA */
+        .cta {
+            background:#000000;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+        }
+
+        .cta p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+    
+
+        .btn {
+            display: inline-block;
+            background-color: var(--gold);
+            color: var(--dark);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border: 2px solid var(--gold);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--gold);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--light);
+            font-family: 'Palatino Linotype', 'Book Antiqua', serif;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 1.5rem;
+                text-align: center;
+            }
+            
+            .hotel-content, .fabrication-content {
+                flex-direction: column;
+            }
+            
+            .cta h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="incense-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h1>L'Art Ancestral de l'Encens</h1>
+                <p class="tagline">Découvrez la polyvalence des fragrances naturelles pour votre bien-être quotidien</p>
+                <p>Transformez votre intérieur, créez vos propres parfums et produits cosmétiques avec l'encens de qualité supérieure</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro">
+        <div class="container">
+            <h2>L'Encens : Bien Plus Qu'une Simple Fragrance</h2>
+            <p>Depuis des millénaires, l'encens accompagne l'humanité dans ses rituels spirituels, ses moments de détente et son quotidien. Aujourd'hui, nous redécouvrons ses multiples applications pratiques qui vont bien au-delà de la simple diffusion d'arômes.</p>
+            
+            <div class="highlight-box">
+                <p><strong>L'encens de qualité</strong> est fabriqué à partir de résines naturelles, d'huiles essentielles et d'ingrédients botaniques sélectionnés. Sa combustion lente libère non seulement des parfums envoûtants, mais aussi des propriétés thérapeutiques et apaisantes.</p>
+            </div>
+            
+            <p>Que vous souhaitiez recréer l'ambiance raffinée d'une chambre d'hôtel de luxe, créer votre propre parfum signature, ou fabriquer des produits cosmétiques naturels, l'encens offre une base olfactive exceptionnelle.</p>
+        </div>
+    </section>
+
+    <!-- Hotel Section -->
+    <section class="hotel-section">
+        <div class="container">
+            <h2 class="section-title">L'Art d'Ambiancer les Espaces comme en Hôtel de Luxe</h2>
+            
+            <div class="hotel-content">
+                <div class="hotel-text">
+                    <h3>Créez une atmosphère d'exception dans votre intérieur</h3>
+                    <p>Les plus grands hôtels du monde utilisent des fragrances d'ambiance subtiles pour créer une expérience mémorable pour leurs clients. Avec les bons encens, vous pouvez recréer cette magie chez vous.</p>
+                    <p>Contrairement aux diffuseurs électriques, l'encens offre une fragrance plus authentique et naturelle, avec une diffusion qui évolue gracieusement dans l'espace au fil du temps.</p>
+                    
+                    <div class="hotel-tips">
+                        <div class="tip">
+                            <i class="fas fa-wind"></i>
+                            <h4>Diffusion optimale</h4>
+                            <p>Placez l'encens dans un endroit stratégique pour une diffusion uniforme</p>
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-clock"></i>
+                            <h4>Durée contrôlée</h4>
+                            <p>Allumez 30 minutes avant l'arrivée de vos invités pour un effet parfait</p>
+                        </div>
+                        <div class="tip">
+                            <i class="fas fa-blender-phone"></i>
+                            <h4>Associations d'arômes</h4>
+                            <p>Combinez différents encens pour créer une signature olfactive unique</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hotel-image">
+              
+                    <div class="hotel-visual">
+                        <i class="fas fa-hotel"></i>
+                    </div>
+                    <p style="text-align: center; margin-top: 1rem; font-style: italic; color: var(--secondary);">Ambiance hôtelière luxueuse à domicile</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Applications -->
+    <section class="applications">
+        <div class="container">
+            <h2 class="section-title">Applications Créatives de l'Encens</h2>
+            <p style="text-align: center; margin-bottom: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">Découvrez comment transformer l'encens en base pour vos créations personnalisées</p>
+            
+            <div class="applications-grid">
+                <!-- Parfum liquide -->
+                <div class="application-card">
+                    <div class="card-img" style="background: linear-gradient(135deg, #8B4513 0%, #A0522D 100%);">
+                        <i class="fas fa-wine-bottle"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Fabrication de Parfum Liquide</h3>
+                        <p>Transformez la fumée d'encens en une fragrance liquide élégante et durable pour une application personnelle.</p>
+                        
+                        <ul class="card-features">
+                            <li>Récupérez la résine d'encens non brûlée</li>
+                            <li>Infusez dans de l'alcool éthylique de qualité</li>
+                            <li>Filtrez et laissez vieillir 4 à 6 semaines</li>
+                            <li>Ajoutez des notes complémentaires (agrumes, fleurs)</li>
+                            <li>Créez votre signature olfactive unique</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Savon -->
+                <div class="application-card">
+                    <div class="card-img" style="background: linear-gradient(135deg, #A0522D 0%, #D2691E 100%);">
+                        <i class="fas fa-soap"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Fabrication de Savon Artisanal</h3>
+                        <p>Intégrez les essences d'encens dans vos savons maison pour des propriétés aromatiques et apaisantes.</p>
+                        
+                        <ul class="card-features">
+                            <li>Poudre d'encens intégrée à la pâte à savon</li>
+                            <li>Huiles essentielles complémentaires</li>
+                            <li>Procédé à froid pour préserver les arômes</li>
+                            <li>Propriétés antiseptiques naturelles</li>
+                            <li>Parfum subtil qui persiste après le rinçage</li>
+                        </ul>
+                    </div>
+                </div>
+
+                                <!-- Boutons Sociaux -->
+<div class="social-buttons">
+    <a href="https://taaklom.zbooni.com/en" title="shop">🛍️</a>
+    <a href="https://www.instagram.com/taklomjawali?igsh=MTNhaThqOWJraHA4Yg" title="Instagram">📸</a>
+    <a href="https://wa.me/message/VUZXCGKMEMBPP1?src=qr" title="WhatsApp">💬</a>
+    <a href="https://pin.it/7G9XFxBqz" title="pinterst">🖌️</a>
+</div>
+       </body>
+       </html>
+                <!-- Shampooin
